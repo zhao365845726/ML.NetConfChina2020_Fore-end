@@ -1,0 +1,113 @@
+<!--pages/shop/detail.wxml-->
+<!-- <scroll-view scroll-y="true" style="height: 100%;"> -->
+<view id="wrap">
+  <view style="height: {{clientHeight?clientHeight+'px':'auto'}}" class="over-scroll">
+    <!-- 商品头部轮播 -->
+    <view class="banner-top" id="header">
+      <view class="swiper-container">
+        <view class="swiper-wrapper">
+          <view class="swiper-slide">
+            <image src="{{productDeta.cover?productDeta.cover:baseImage}}" class="banner-img"></image>
+          </view>
+        </view>
+        <view class="slide-index">
+          <text>{{activeNav}}</text>/1</view>
+      </view>
+    </view>
+
+
+    <view class="position-box">
+
+      <view class="detail-head">
+        <view class="sale-head">
+          <text class="vip-title">价格：</text>
+          <text class="vip-price number">¥{{productDeta.price?productDeta.price:'0.00'}}</text>
+          <!-- <text class="sale-origin">原价：¥{{productDeta.price}}</text> -->
+          <text class="sale-num">月销量{{productDeta.sales_volume?productDeta.sales_volume:'0'}}件</text>
+        </view>
+        <view class="detail-name">{{productDeta.name}}</view>
+        <view class="detail-stock">库存：{{productDeta.stock?productDeta.stock:'0'}}件</view>
+      </view>
+
+    </view>
+
+
+    <!-- <view class="slice"></view>
+
+  <view class="guess-box">
+    <view class="guess-head">猜你喜欢</view>
+    <view class="guess-wrap">
+      <view class="seckill-list" wx:for="{{maybeLiked}}" bindtap="productOtner">
+        <image src="{{item.cover?item.cover:baseImage}}" class="seckill-cover"></image>
+        <view class="seckill-name">{{item.name}}</view>
+        <view class="seckill-sell">已售{{item.sales_volume}}件</view>
+        <view class="seckill-origin">原价：¥{{item.price}}</view>
+        <view class="guess-price">会员价：
+          <view class="number">¥{{item.vip_price?item.vip_price:'0.00'}}</view>
+        </view>
+      </view>
+    </view>
+  </view> -->
+
+    <view class="slice"></view>
+
+    <view class="product-comment">
+      <view class="comment-head">
+        <view class="left-head fl">商品评价</view>
+        <view class="right-head fr" bindtap="lookComment">查看全部 ></view>
+      </view>
+      <view class="comment-box">
+        <view class="comment-list" wx:for="{{comments}}" wx:key="this">
+          <view class="comment-left">
+            <image src="{{item.thumb?item.thumb:baseImage}}" class="comment-thumb"></image>
+          </view>
+          <view class="comment-right">
+            <view class="comment-nickname">
+              <text class="fl">{{item.nickname?item.nickname:'匿名用户'}}</text>
+              <text class="fr comment-time">{{item.create_time}}</text>
+            </view>
+            <view class="comment-text">{{item.body}}</view>
+          </view>
+        </view>
+        <view class="no-com" wx:if="{{comments.length==0}}">
+          暂无评价
+        </view>
+      </view>
+    </view>
+
+    <view class="slice"></view>
+
+    <view class="detail-model">
+      <view class="models-head">规格参数</view>
+      <view class="models-list">
+        <text class="gray">产地：</text>
+        <text>{{productDeta.place?productDeta.place:'见包装'}}</text>
+      </view>
+      <view class="models-list">
+        <text class="gray">规格：</text>
+        <text class="models-detail">{{productDeta.default_model?productDeta.default_model:'见包装'}}</text>
+      </view>
+      <view class="models-list">
+        <text class="gray">单位：</text>
+        <text>{{productDeta.stock_unit?productDeta.stock_unit:'见包装'}}</text>
+      </view>
+    </view>
+
+    <view class="slice"></view>
+
+    <view class="detail-rich">
+      <view class="rich-head">商品详情</view>
+      <rich-text nodes="{{details}}"></rich-text>
+    </view>
+
+    
+  </view>
+<view class="full-bottom"></view>
+  <view class="detail-bottom">
+    <view class="fav-bto-n ct {{isfav?'fav-bto':''}}" bindtap="favProduct"></view>
+    <view class="cart-bto ct" bindtap="closeToCart"></view>
+    <view class="add-btn ct" catchtap="addToCart">加入购物车</view>
+  </view>
+
+</view>
+<!-- </scroll-view> -->

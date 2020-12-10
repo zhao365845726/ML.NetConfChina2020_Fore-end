@@ -1,0 +1,8 @@
+<!--pages/cart/pay.wxml-->
+<view id="wrap">
+  <view class="recharge-box">
+    <view class="symbol ct">¥</view>
+    <input type="number" class="input ct" inputmode="decimal" value="{{amount}}" data-name="amount" bindinput='inputedit' readonly disabled="true"></input>
+  </view>
+  <view class="btn {{amount ? 'active':''}}" bindtap="payResult">支付</view>
+</view>

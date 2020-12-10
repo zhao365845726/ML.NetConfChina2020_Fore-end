@@ -1,0 +1,42 @@
+<!--pages/shop/shop.wxml-->
+<view class="category-sub">
+  <view class="category-sublist {{activeSub == index ? 'category-sublist-active' : ''}}" wx:for="{{subList}}" bindtap="chooseSub" data-current="{{index}}" wx:key="this">
+    {{item.name}}
+  </view>
+</view>
+
+<view class="fix-full"></view>
+
+<!-- 瀑布流列表 -->
+<view id="waterfull" style="height: {{clientHeight?clientHeight+'px':'auto'}}">
+  <!-- 左列 -->
+  <view class="leftContainer">
+    <view class="product-list" wx:for="{{productList}}" wx:if="{{index%2==0}}" bindtap="productDeta" wx:key="this" data-current="{{item.id}}">
+      <image src="{{item.cover?item.cover:baseImage}}" class="product-cover" mode="widthFix"></image>
+      <view class="product-name">{{item.name}}</view>
+      <view class="product-sale">销量{{item.sales_volume?item.sales_volume:'0'}}件</view>
+      <!-- <view class="product-origin">原价：¥{{item.price}}</view> -->
+      <view class="product-bto">
+        <view class="product-pirce "> 会员价：
+          <text class="number">¥{{item.price?item.price:'0.00'}}</text>
+        </view>
+        <view class="product-add ct" catchtap="addToCart" data-current="{{item.id}}" data-price="{{item.price}}"></view>
+      </view>
+    </view>
+  </view>
+  <!-- 右列 -->
+  <view class="rightContainer">
+    <view class="product-list" wx:for="{{productList}}" wx:if="{{index%2==1}}" bindtap="productDeta" data-current="{{item.id}}" wx:key="this">
+      <image src="{{item.cover?item.cover:baseImage}}" class="product-cover" mode="widthFix"></image>
+      <view class="product-name">{{item.name}}</view>
+      <view class="product-sale">销量{{item.sales_volume?item.sales_volume:'0'}}件</view>
+      <!-- <view class="product-origin">原价：¥{{item.price}}</view> -->
+      <view class="product-bto">
+        <view class="product-pirce "> 价格：
+          <text class="number">¥{{item.price?item.price:'0.00'}}</text>
+        </view>
+        <view class="product-add ct" catchtap="addToCart" data-current="{{item.id}}" data-price="{{item.price}}" ></view>
+      </view>
+    </view>
+  </view>
+</view>

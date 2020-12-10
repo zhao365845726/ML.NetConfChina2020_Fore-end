@@ -1,0 +1,48 @@
+<!--pages/cart/orderconfirm.wxml-->
+<view id="wrap" >
+
+  <view class="product-box">
+    <view class="box-title">所购商品</view>
+    <view class="box-list" wx:for="{{cartList}}" wx:if="{{item.check}}" wx:key="this">
+      <image src="{{item.cover?item.cover:baseImage}}" class="box-cover"></image>
+      <view class="box-detail">
+        <view class="box-name">{{item.name}}</view>
+        <view class="box-model">{{item.product_specs}}</view>
+        <view class="box-bto">
+          <view class="box-price number">¥{{item.price}}</view>
+          <view class="box-num">x{{item.number}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="order-box">
+    <view class="box-title order-title">订单详情</view>
+    <view class="order-list">
+      <span class="order-left">商品总价</span>
+      <span class="number fr">+¥{{total_money}}</span>
+    </view>
+    <view class="order-list">
+      <span class="order-left">优惠价格</span>
+      <span class="number fr">-¥{{deductible_amount?deductible_amount:'0.00'}}</span>
+    </view>
+    <view class="order-bto">
+      小计：
+      <span class="number">+¥{{total_money}}</span>
+    </view>
+  </view>
+
+  <view class="remark-box order-box">
+    <view class="box-title remark-title">订单备注</view>
+    <textarea class="remark-text" placeholder="请输入备注内容" v-model="remark"></textarea>
+  </view>
+
+  <view class="full-bto"></view>
+
+  <view class="fix-bto">
+    <view class="total-price">应付：
+      <text class="number">¥{{total_money}}</text>
+    </view>
+    <view class="firm-btn" bindtap="confirm">确认下单</view>
+  </view>
+</view>

@@ -1,0 +1,15 @@
+<!--pages/mine/record.wxml-->
+<view id="wrap">
+  <view class="box">
+    <view class="head">消费记录</view>
+    <view class="list" wx:for="{{record}}" wx:key="this">
+      <view class="left-title">支付订单</view>
+      <view class="left-time">{{item.orderNum}}</view>
+      <view class="amount ct">-¥{{item.quota}}</view>
+    </view>
+    <view class="no-data" wx:if="{{record.length === 0}}">
+      <view class="no-data-empty"></view>
+      <view class="no-data-in"></view>
+    </view>
+  </view>
+</view>

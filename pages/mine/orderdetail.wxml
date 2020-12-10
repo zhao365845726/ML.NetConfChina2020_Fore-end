@@ -1,0 +1,85 @@
+<!--pages/mine/orderdetail.wxml-->
+<view id="wrap">
+  <view class="head">
+    <view class="i-icon ct w-icon" wx:if="{{orderInfo.status === 1}}"></view>
+    <view class="i-icon ct" wx:else></view>
+    <view class="i-text ct" wx:if="{{orderInfo.status === 1}}">待付款</view>
+    <view class="i-text ct" wx:if="{{orderInfo.status === 2}}">已支付</view>
+    <view class="i-text ct" wx:if="{{orderInfo.status === 3}}">待评价</view>
+    <view class="i-text ct" wx:if="{{orderInfo.status === 4}}">已完成</view>
+    <view class="i-text ct" wx:if="{{orderInfo.status === 5}}">已关闭</view>
+    <!-- <view class="last-time" wx:if="{{orderInfo.status === 1}}">剩余 {{d?d:''}}{{d?'天':''}}{{h?h>=10?h:'0'+h:''}}{{h?'时':''}}{{m>=10?m:'0'+m}}{{m?'分':''}}{{s>=10?s:'0'+s}}{{s?'秒':''}} 自动关闭订单</view> -->
+  </view>
+
+  <view class="product-box">
+    <view class="box-list">
+      <image src="{{orderInfo.cover?orderInfo.cover:baseImage}}" class="box-cover"></image>
+      <view class="box-detail">
+        <view class="box-name">{{orderInfo.name}}</view>
+        <view class="box-model"></view>
+        <view class="box-bto">
+          <view class="box-price number">¥{{orderInfo.price}}</view>
+          <view class="box-num">x{{orderInfo.number}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="order-box">
+    <view class="box-title order-title">订单详情</view>
+    <view class="order-list">
+      <text class="order-left">商品总价</text>
+      <text class="number fr">+¥{{orderInfo.price * orderInfo.number}}</text>
+    </view>
+    <view class="order-list">
+      <span class="order-left">优惠价格</span>
+      <span class="number fr">-¥0.00</span>
+    </view>
+    <view class="order-bto" wx:if="{{orderInfo.status != 1}}">
+      实付金额：
+      <text class="number">+¥{{orderInfo.paidAmount}}</text>
+    </view>
+    <view class="order-bto" wx:if="{{orderInfo.status == 1}}">
+      需付金额：
+      <text class="number">+¥{{orderInfo.paidAmount}}</text>
+    </view>
+  </view>
+
+  <view class="order-remark">
+    <view class="detail-left ct">订单备注</view>
+    <view class="detail-right ct">{{orderInfo.remark}}</view>
+  </view>
+
+  <view class="order-remark order-sub">
+    <view class="sub-list">
+      <view class="detail-left ct">订单编号：</view>
+      <view class="detail-right ct sub-right">{{orderInfo.orderNum}}</view>
+    </view>
+    <view class="sub-list">
+      <view class="detail-left ct">下单时间：</view>
+      <view class="detail-right ct sub-right">{{orderInfo.addTime}}</view>
+    </view>
+    <view class="sub-list no-margin" wx:if="{{orderInfo.status != 1 && orderInfo.status != 5}}">
+      <view class="detail-left ct">支付方式：</view>
+      <view class="detail-right ct sub-right">微信支付</view>
+    </view>
+  </view>
+
+
+  <!-- <view class="full-bto" wx:if="{{orderInfo.status === 1 || orderInfo.status === 2 || orderInfo.status === 3 || orderInfo.status === 4}}"></view> -->
+
+  <!-- <view class="fix-bto" wx:if="{{orderInfo.status === 1}}">
+    <view class="total-price">应付：
+      <text class="number">¥{{orderInfo.paidAmount}}</text>
+    </view>
+    <view class="firm-btn" bindtap="goPay">立即支付</view>
+  </view>
+
+  <view class="fix-bto" wx:if="{{orderInfo.status === 2}}">
+    <view class="firm-btn take-btn" bindtap="goShip">确认收货</view>
+  </view>
+
+  <view class="fix-bto" wx:if="{{orderInfo.status === 3}}">
+    <view class="firm-btn com-btn" bindtap="goComment">去评价</view>
+  </view> -->
+</view>

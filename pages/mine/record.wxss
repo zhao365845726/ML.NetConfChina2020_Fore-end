@@ -1,0 +1,76 @@
+/* pages/mine/record.wxss */
+
+page {
+  background: #fff;
+}
+
+.box {
+  width: 100%;
+  background: #fff;
+  overflow: hidden;
+}
+
+.title {
+  color: #fff;
+  font-size: 30rpx;
+  line-height: 42rpx;
+  margin-top: 62rpx;
+  text-align: center;
+}
+
+.num {
+  color: #fff;
+  font-weight: bold;
+  line-height: 120rpx;
+  font-size: 80rpx;
+  text-align: center;
+}
+
+.slice {
+  height: 32rpx;
+}
+
+.head {
+  color: #333;
+  font-size: 36rpx;
+  font-weight: bold;
+  line-height: 50rpx;
+  padding-left: 32rpx;
+}
+
+.list {
+  height: 128rpx;
+  border-bottom: 0.5px solid #eee;
+  width: 686rpx;
+  margin: 0 auto;
+  position: relative;
+}
+
+.left-title {
+  color: #333;
+  font-size: 30rpx;
+  line-height: 42rpx;
+  position: absolute;
+  left: 0;
+  top: 24rpx;
+}
+
+.left-time {
+  color: #999;
+  font-size: 24rpx;
+  position: absolute;
+  line-height: 34rpx;
+  left: 0;
+  bottom: 24rpx;
+}
+
+.amount {
+  color: #333;
+  font-size: 30rpx;
+  right: 0;
+  line-height: 42rpx;
+}
+
+.no-data-empty {
+  background: #fff;
+}

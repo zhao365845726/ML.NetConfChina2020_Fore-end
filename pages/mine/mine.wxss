@@ -1,0 +1,170 @@
+/* pages/mine/mine.wxss */
+
+#header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: #fff;
+  z-index: 999;
+}
+
+.four_header {
+  height: 88rpx;
+  background: #fff;
+  position: relative;
+}
+
+.word_icon {
+  width: 44rpx;
+  height: 44rpx;
+  float: right;
+  margin-top: 22rpx;
+  margin-right: 32rpx;
+}
+
+.reddot {
+  width: 12rpx;
+  height: 12rpx;
+  border-radius: 50%;
+  background: #ff5055;
+  position: absolute;
+  bottom: 56rpx;
+  right: 26rpx;
+}
+
+.empty_custom {
+  height: 88rpx;
+}
+
+#wrap {
+  background: #f5f5f8;
+}
+
+.top {
+  background: #fff;
+}
+
+.top_name {
+  height: 184rpx;
+}
+
+.top_photo {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  float: left;
+  margin-left: 32rpx;
+  margin-top: 32rpx;
+}
+
+.top_usename {
+  width: 59%;
+  line-height: 184rpx;
+  color: #37384d;
+  font-size: 44rpx;
+  font-weight: bold;
+  float: left;
+  margin-left: 32rpx;
+}
+
+.top_advance {
+  float: right;
+  margin-right: 32rpx;
+  margin-top: 76rpx;
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.top_listmy {
+  height: 126rpx;
+  border-top: 1px solid #ededed;
+  border-bottom: 1px solid #ededed;
+}
+
+.toplist {
+  width: 50%;
+  float: left;
+  height: 100%;
+  border-right: 1px solid #ededed;
+  box-sizing: border-box;
+  line-height: 126rpx;
+  color: #37384d;
+  font-size: 30rpx;
+  font-weight: bold;
+}
+
+.toplist_right {
+  float: right;
+  border: none;
+}
+
+.top_listmy_sec {
+  border: none;
+}
+
+.sale_cion {
+  width: 40rpx;
+  height: 40rpx;
+  float: left;
+  margin-left: 32rpx;
+  margin-top: 44rpx;
+}
+
+.mytxt {
+  float: left;
+  margin-left: 22rpx;
+}
+
+.advance_iacon {
+  width: 26rpx;
+  height: 26rpx;
+  float: right;
+  margin-right: 32rpx;
+  margin-top: 50rpx;
+}
+
+.content {
+  margin-top: 16rpx;
+  box-sizing: border-box;
+  padding: 0 32rpx 0 32rpx;
+  background: #fff;
+}
+
+.contentlist {
+  height: 120rpx;
+  border-bottom: 1px solid #ededf0;
+  line-height: 120rpx;
+  color: #37384d;
+  font-size: 32rpx;
+}
+
+.contentlist_icon {
+  width: 80rpx;
+  height: 80rpx;
+  float: left;
+  margin-top: 25rpx;
+}
+
+.contentlist_txt {
+  float: left;
+  margin-left: 20rpx;
+}
+
+.contentlist_ad {
+  width: 30rpx;
+  height: 30rpx;
+  float: right;
+  margin-top: 42rpx;
+}
+
+.priece {
+  float: right;
+  margin-right: 20rpx;
+  color: #8a8a9a;
+  font-size: 26rpx;
+}
+
+.norbor {
+  border: none;
+}

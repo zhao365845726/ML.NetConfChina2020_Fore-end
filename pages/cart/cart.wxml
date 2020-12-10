@@ -1,0 +1,59 @@
+<!--pages/cart/cart.js.wxml-->
+<view id="wrap">
+
+  <view class="car-head" id="header">
+    <view class="car-head-in">
+      <view class="car-title">购物车</view>
+      <view class="car-edit" bindtap="chooseEdit">{{edit ? '完成':'编辑'}}</view>
+    </view>
+    <view class="car-border {{ cartList.length === 0 ? 'no-border':''}}"></view>
+  </view>
+
+  <view class="car-list {{index===0 ? 'topone':''}}" wx:for="{{cartList}}" wx:key="this">
+    <view class="car-choice {{item.check ?'check-on':''}} {{index===0 ?'car-choice-one':'' }}" catchtap="chooseCar" data-current="{{index}}"></view>
+    <view class="car-product {{index === 0 ?'car-product-one' :''}}">
+      <image src="{{item.cover?item.cover:baseImage}}" class="car-cover"></image>
+      <view class="car-detail">
+        <view class="car-name">{{item.name}}</view>
+        <view class="car-origin">
+        <text>\t\t\t</text>
+        <!-- 原价：¥{{item.price}} -->
+        </view>
+        <view class="car-bto">
+          <view class="car-price">价格：
+            <text class="number">¥{{item.price?item.price:'0.00'}}</text>
+          </view>
+          <view class="car-num">
+            <view class="car-reduce ct {{item.number === 1 ? 'reduce-g' :''}}" catchtap="controlNum" data-current="{{index}}" data-type="1"></view>
+            <view class="car-number ct">{{item.number}}</view>
+            <view class="car-add ct" catchtap="controlNum" data-current="{{index}}" data-type="2"></view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="no-data" wx:if="{{cartList.length === 0}}">
+    <view class="no-data-empty"></view>
+    <view class="no-data-in"></view>
+  </view>
+
+  <view class="fix-full"></view>
+
+  <view class="fix-bto" wx:if="{{!edit}}">
+    <view class="all-choice ct {{!allcheck ? 'all-choice-n' : ''}}" bindtap="chooseAll"></view>
+    <view class="all-choice-text ct" bindtap="chooseAll">全选</view>
+    <view class="all-price">合计：
+      <text class="number">¥{{total_money}}</text>
+    </view>
+    <!-- <view class="vip-price">会员优惠：¥{{total_vip_discounts}}</view> -->
+    <view class="confirm ct" bindtap="confirm">结算({{total_count}})</view>
+  </view>
+
+  <view class="fix-bto" wx:if="{{edit}}">
+    <view class="all-choice ct {{!allcheck ? 'all-choice-n' : ''}}" bindtap="chooseAll"></view>
+    <view class="all-choice-text ct" bindtap="chooseAll">全选</view>
+    <view class="confirm ct" bindtap="deleCart">删除({{total_count}})</view>
+  </view>
+
+</view>

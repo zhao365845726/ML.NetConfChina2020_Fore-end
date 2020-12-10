@@ -1,0 +1,23 @@
+<!--pages/mine/mine.wxml-->
+<view id="wrap">
+	<view class="top">
+		<view class="top_name">
+			<image src="{{avatarUrl?avatarUrl:defalUrl}}" class="top_photo"></image>
+			<view class="top_usename">{{nickName?nickName:defaName}}</view>
+		</view>
+	</view>
+
+	<view class="content">
+		<view class="contentlist" bindtap="goMydata" data-name="order">
+			<image src="../../image/mine/order.png" class="contentlist_icon"></image>
+			<view class="contentlist_txt">我的订单</view>
+		</view>
+		<view class="contentlist" bindtap="goMydata" data-name="record">
+			<image src="../../image/mine/interal.png" class="contentlist_icon"></image>
+			<view class="contentlist_txt">消费记录</view>
+		</view>
+	</view>
+
+	
+</view>
+

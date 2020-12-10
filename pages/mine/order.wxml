@@ -1,0 +1,45 @@
+<view class="order-nav">
+  <view class="order-nav-list {{activeNav==index?'order-nav-active':''}}" wx:for="{{orderNav}}" bindtap="chooseNav" data-current="{{index}}" wx:key="this">
+    {{item}}
+    <view class="order-nav-dot" wx:if="{{activeNav == index}}"></view>
+  </view>
+</view>
+<view class="order-nav-empty"></view>
+
+<swiper style="height: {{clientHeight?clientHeight+'px':'auto'}}" current='{{activeNav}}' bindchange='bindChange'>
+  <swiper-item wx:for="{{orderData}}" wx:key="this" data-current="{{index}}" data-current="{{index}}">
+    <scroll-view scroll-y="true" bindscrolltolower="scrollbottom" style="height: 100%;">
+      <view class="order-list" wx:for="{{item.orderList}}" bindtap="orderDetail" data-current="{{index}}" wx:key="this">
+        <view class="order-head">
+          <view class="order-number ct">订单编号：{{item.orderNum}}</view>
+          <view class="order-status ct" wx:if="{{item.status === 1}}">待支付</view>
+          <view class="order-status ct" wx:if="{{item.status === 2}}">已支付</view>
+          <view class="order-status ct" wx:if="{{item.status === 3}}">待评价</view>
+          <view class="order-status ct" wx:if="{{item.status === 4}}">已完成</view>
+          <view class="order-status ct" wx:if="{{item.status === 5}}">已取消</view>
+        </view>
+        <view class="order-product">
+          <image src="{{item.cover?item.cover:baseImage}}" class="order-cover ct"></image>
+          <view class="order-name">{{item.name}}</view>
+          <view class="order-model"></view>
+          <view class="order-price number">¥{{item.price}}</view>
+          <view class="order-num">x{{item.number}}</view>
+        </view>
+        <view class="order-bottom">
+          <view class="bottom-price ct">
+            {{item.status === 1 ? '需付款：':'已付款：'}}
+            <text class="number">¥{{item.paidAmount}}</text>
+          </view>
+          <view class="bottom-cancel ct" wx:if="{{item.status === 1}}" catchtap="cancelOrder" data-id="{{item.id}}">取消订单</view>
+          <view class="bottom-pay ct" wx:if="{{item.status === 1}}" catchtap="goPay" data-id="{{item.id}}" data-amount="{{item.paidAmount}}">去支付</view>
+          <!-- <view class="bottom-pay bottom-cir ct" wx:if="{{item.status === 2 }}" catchtap="goShip" data-id="{{item.id}}">确认收货</view> -->
+          <view class="bottom-cancel bottom-com ct" wx:if="{{item.status === 3}}" catchtap="goComment" data-id="{{item.id}}">去评价 </view>
+        </view>
+      </view>
+      <view class="no-data" wx:if="{{item.orderList.length === 0}}">
+        <view class="no-data-empty"></view>
+        <view class="no-data-in"></view>
+      </view>
+    </scroll-view>
+  </swiper-item>
+</swiper>

@@ -1,0 +1,52 @@
+/* pages/cart/pay.wxss */
+
+page {
+  background: #f6f6f6;
+}
+
+.recharge-box {
+  background: #fff;
+  position: relative;
+  margin: 20rpx auto;
+  height: 160rpx;
+}
+
+.symbol {
+  color: #333;
+  font-size: 68rpx;
+  line-height: 96rpx;
+  left: 32rpx;
+}
+
+.input {
+  height: 56rpx;
+  line-height: 56rpx;
+  color: #333;
+  font-size: 40rpx;
+  left: 90rpx;
+}
+
+input::placeholder {
+  color: #bbb;
+}
+
+input::-webkit-input-placeholder {
+  color: #bbb;
+}
+
+.btn {
+  width: 686rpx;
+  height: 78rpx;
+  background: #d7f4e0;
+  border-radius: 38rpx;
+  margin: 80rpx auto;
+  text-align: center;
+  color: #fff;
+  line-height: 78rpx;
+  font-weight: bold;
+  font-size: 30rpx;
+}
+
+.active {
+  background: #36c665;
+}

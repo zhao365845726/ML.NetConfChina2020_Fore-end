@@ -1,0 +1,200 @@
+/* pages/mine/order.wxss */
+
+page {
+  height: 100%;
+  background: #F6F6F6;
+}
+
+.order-nav {
+  height: 90rpx;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  display: -webkit-flex;
+  display: flex;
+  background: #fff;
+  transform: translateZ(0);
+}
+
+.order-nav-list {
+  flex: 1;
+  text-align: center;
+  color: #666;
+  font-size: 30rpx;
+  line-height: 90rpx;
+  position: relative;
+}
+
+.order-nav-dot {
+  width: 32rpx;
+  height: 6rpx;
+  background: #36c665;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.order-nav-empty {
+  height: 90rpx;
+  width: 100%;
+}
+
+.order-nav-active {
+  font-weight: bold;
+  color: #36c665;
+}
+
+swiper-item {
+  overflow: scroll;
+  background: #f5f5f8;
+  -webkit-overflow-scrolling: touch;
+}
+
+.order-list {
+  background: #fff;
+  margin-top: 20rpx;
+  box-sizing: border-box;
+  padding: 0 32rpx;
+}
+
+.order-head {
+  height: 100rpx;
+  border-bottom: 0.5px solid #eee;
+  position: relative;
+}
+
+.order-number {
+  color: #656b72;
+  font-size: 26rpx;
+  left: 0;
+}
+
+.order-status {
+  color: #36c665;
+  font-size: 26rpx;
+  font-weight: bold;
+  right: 0;
+}
+
+.order-product {
+  height: 220rpx;
+  position: relative;
+}
+
+.order-cover {
+  width: 156rpx;
+  height: 156rpx;
+  border-radius: 16rpx;
+  left: 0;
+  object-fit: cover;
+}
+
+.order-name {
+  color: #333;
+  font-size: 28rpx;
+  font-weight: bold;
+  line-height: 40rpx;
+  position: absolute;
+  left: 172rpx;
+  top: 32rpx;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 400rpx;
+}
+
+.order-model {
+  color: #999;
+  font-size: 24rpx;
+  line-height: 34rpx;
+  position: absolute;
+  left: 172rpx;
+  top: 80rpx;
+  max-width: 400rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  height: 20rpx;
+}
+
+.order-price {
+  color: #333;
+  font-size: 28rpx;
+  font-weight: bold;
+  line-height: 42rpx;
+  position: absolute;
+  left: 172rpx;
+  bottom: 32rpx;
+}
+
+.order-num {
+  color: #999;
+  font-size: 26rpx;
+  line-height: 36rpx;
+  position: absolute;
+  right: 0;
+  bottom: 34rpx;
+}
+
+.order-bottom {
+  height: 92rpx;
+  position: relative;
+  border-top: 0.5px solid #eee;
+}
+
+.bottom-price {
+  font-size: 26rpx;
+  color: #333;
+  left: 0;
+}
+
+.bottom-price span {
+  color: #ff7622;
+  font-size: 28rpx;
+  font-weight: bold;
+}
+
+.bottom-cancel {
+  width: 160rpx;
+  height: 60rpx;
+  background: #fff;
+  border-radius: 40rpx;
+  border: 0.5px solid #bbb;
+  box-sizing: border-box;
+  line-height: 60rpx;
+  color: #656b72;
+  font-size: 26rpx;
+  text-align: center;
+  right: 176rpx;
+}
+
+.bottom-pay {
+  width: 160rpx;
+  height: 60rpx;
+  background: #36c665;
+  border-radius: 40rpx;
+  box-sizing: border-box;
+  line-height: 60rpx;
+  color: #fff;
+  font-size: 26rpx;
+  text-align: center;
+  right: 0;
+}
+
+.bottom-com {
+  border: 0.5px solid #36c665;
+  color: #36c665;
+  right: 0;
+}
+
+.bottom-cir {
+  width: 240rpx;
+}
+
+.no-data-empty {
+  background: #f6f6f6;
+}
+
