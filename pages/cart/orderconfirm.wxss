@@ -221,7 +221,7 @@ page{
 .firm-btn {
     width: 200rpx;
     height: 70rpx;
-    background: #36C665;
+    background: #9c86e7;
     border-radius: 40rpx;
     line-height: 70rpx;
     text-align: center;

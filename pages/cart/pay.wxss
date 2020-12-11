@@ -48,5 +48,5 @@ input::-webkit-input-placeholder {
 }
 
 .active {
-  background: #36c665;
+  background: #9c86e7;
 }

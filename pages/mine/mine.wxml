@@ -16,8 +16,14 @@
 			<image src="../../image/mine/interal.png" class="contentlist_icon"></image>
 			<view class="contentlist_txt">消费记录</view>
 		</view>
+    <!-- <view class="contentlist" bindtap="goMydata" data-name="record">
+			<image src="../../image/mine/system.png" class="contentlist_icon"></image>
+			<view class="contentlist_txt">退出登录</view>
+		</view> -->
 	</view>
 
-	
+  <view  class="login-out" bindtap="loginOut">
+      退出登录
+  </view>
 </view>
 

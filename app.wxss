@@ -1,5 +1,14 @@
 /**app.wxss**/
+button {
+  border: none;
+  border-color: transparent;
+  background-color: transparent;
+  padding: 0;
+}
 
+button::after {
+  border: none;
+}
 .container {
   height: 100%;
   display: flex;

@@ -1,14 +1,16 @@
 <!--index.wxml-->
-<view class="container">
+<!-- <view class="container">
   <view class="userinfo">
     <button  open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 微信登录 </button>
     <button class="other" bindtap="guestlogin"> 游客登录 </button>
-    <!-- <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block> -->
   </view>
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
   </view>
+</view> -->
+
+<view class="wrapper">
+    <image src="../../image/bg.png" class="head_bg" mode="widthFix"></image>
+    <button  open-type="getUserInfo" bindgetuserinfo="getUserInfo" class="wx-btn"> 微信登录 </button>
+    <view bindtap="guestlogin" class="wx-btn other"> 游客登录 </view>
 </view>

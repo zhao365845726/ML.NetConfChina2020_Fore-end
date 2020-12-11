@@ -168,3 +168,19 @@
 .norbor {
   border: none;
 }
+
+.login-out {
+  width: 630rpx;
+  height: 70rpx;
+  border-radius: 48rpx;
+  position: fixed;
+  bottom: 40rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  line-height: 70rpx;
+  font-size: 30rpx;
+  font-weight: bold;
+  background: #9c86e7;
+  color: #fff;
+}

@@ -145,7 +145,7 @@
 }
 
 .right-head {
-  color: #36c665;
+  color: #4e28d4;
   font-size: 26rpx;
 }
 
@@ -289,7 +289,7 @@
   height: 78rpx;
   line-height: 78rpx;
   color: #fff;
-  background: #36c665;
+  background: #9c86e7;
   border-radius: 40rpx;
   text-align: center;
   font-size: 28rpx;

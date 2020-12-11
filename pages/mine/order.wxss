@@ -30,7 +30,7 @@ page {
 .order-nav-dot {
   width: 32rpx;
   height: 6rpx;
-  background: #36c665;
+  background: #9c86e7;
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -44,7 +44,7 @@ page {
 
 .order-nav-active {
   font-weight: bold;
-  color: #36c665;
+  color: #9c86e7;
 }
 
 swiper-item {
@@ -73,7 +73,7 @@ swiper-item {
 }
 
 .order-status {
-  color: #36c665;
+  color: #9c86e7;
   font-size: 26rpx;
   font-weight: bold;
   right: 0;
@@ -174,7 +174,7 @@ swiper-item {
 .bottom-pay {
   width: 160rpx;
   height: 60rpx;
-  background: #36c665;
+  background: #9c86e7;
   border-radius: 40rpx;
   box-sizing: border-box;
   line-height: 60rpx;
@@ -185,8 +185,8 @@ swiper-item {
 }
 
 .bottom-com {
-  border: 0.5px solid #36c665;
-  color: #36c665;
+  border: 0.5px solid #9c86e7;
+  color: #9c86e7;
   right: 0;
 }
 
